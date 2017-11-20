@@ -18,7 +18,8 @@ class ResultsItem extends Component {
         return(
             <div className="card result-item">
                 <div className="card-body d-flex align-items-center justify-content-between">
-                    {this.props.headline}
+                    <a href={this.props.url}>{this.props.headline}</a>
+                    <span>Date: {this.props.date}</span>
                     <button onClick={this.saveClick} className="btn btn-primary">Save</button>
                 </div>
             </div>

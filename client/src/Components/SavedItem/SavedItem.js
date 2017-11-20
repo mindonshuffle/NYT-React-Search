@@ -15,7 +15,7 @@ class SavedItem extends Component {
         return(
             <div className="card result-item">
                 <div className="card-body d-flex align-items-center justify-content-between">
-                    {this.props.headline}
+                    <a href={this.props.url}>{this.props.headline}</a>
                     <button onClick={this.deleteClick} className="btn btn-danger">Delete</button>
                 </div>
             </div>
