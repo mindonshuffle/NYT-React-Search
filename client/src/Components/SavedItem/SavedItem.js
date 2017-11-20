@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import API from '../../Utils/API.js';
 
-const SavedItem = () =>
-    <div className="card saved-card">
-        <div className="card-body d-flex justify-content-between">
-            <h4>This is a Saved Headline</h4>
-            <h5>Saved: 11/19/2017</h5>
-            <button className="btn btn-primary">Remove</button>
-        </div>
-    </div>;
+class SavedItem extends Component {
+
+    deleteClick = (event) => {
+        console.log('To delete:', this.props.id);
+        API.deleteArticle(this.props.id)
+        .then( () => {
+            this.props.loadArticles();
+        });
+    } 
+    
+    render(){
+        return(
+            <div className="card result-item">
+                <div className="card-body d-flex align-items-center justify-content-between">
+                    {this.props.headline}
+                    <button onClick={this.deleteClick} className="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        )
+    }
+}
 
 export default SavedItem;

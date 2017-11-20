@@ -17,7 +17,7 @@ const ResultsCard = ({children}) =>
                     })
 
                     :
-                    <h4>Please Enter a Search</h4>
+                    <h5>Please Enter a Search</h5>
                 }
 
                 </div> 

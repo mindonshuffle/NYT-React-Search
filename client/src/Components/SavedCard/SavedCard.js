@@ -1,6 +1,7 @@
 import React from 'react';
+import SavedItem from '../SavedItem/'
 
-const SavedCard = ({children}) =>
+const SavedCard = (props) =>
     <div className="row">
         <div className="col-md">    
             <div id="savedArticlesCard" className="card">
@@ -8,7 +9,16 @@ const SavedCard = ({children}) =>
                 
                 <div className="card-body">
                 
-                    { children }
+                { props.children[0] ?                 
+                    props.children.map(article => {
+                        return (
+                            <SavedItem loadArticles={props.loadArticles} key={article._id} id={article._id} url={article.url} date={article.date} headline={article.headline}/>
+                        )             
+                    })
+
+                    :
+                    <h4>No Saved Articles Found</h4>
+                }
                                           
                 </div> 
             </div>
