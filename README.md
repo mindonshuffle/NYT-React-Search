@@ -6,6 +6,6 @@ This app allows the user to query the New York Times archive by inputting a sear
 
 If the user selects the "Saved Articles" link at the top of the screen, the app will display all previously saved articles along with a delete button. The delete button will remove that selected article from the database.
 
-[Screenshot of Search Page](./readme/nyt-react-ss1.png)
-[Screenshot of Saved Articles Page](./readme/nyt-react-ss2.png)
+![Screenshot of Search Page](./readme/nyt-react-ss1.png)
+![Screenshot of Saved Articles Page](./readme/nyt-react-ss2.png)
 
