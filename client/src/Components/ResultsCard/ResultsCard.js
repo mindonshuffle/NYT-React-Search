@@ -12,7 +12,7 @@ const ResultsCard = ({children}) =>
                 { children[0] ?                 
                     children.map(article => {
                         return (
-                            <ResultsItem key={article._id} url={article.web_url} headline={article.headline.main}/>
+                            <ResultsItem key={article._id} url={article.web_url} date={article.pub_date} headline={article.headline.main}/>
                         )             
                     })
 
